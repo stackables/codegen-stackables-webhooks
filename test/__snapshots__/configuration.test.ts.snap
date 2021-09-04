@@ -14,7 +14,7 @@ Object {
           },
           "documents": Array [
             Object {
-              "https://data.stackables.io/test-account?introspection=ab68132b-a320-489b-bfa4-2c938f20784e": Object {
+              "https://data.stackables.io/stackables-test/webhooks?introspection=a89751eb-ef0d-4663-9530-fa683b9d8483": Object {
                 "loader": "stackables-webhooks/loader",
               },
             },
@@ -28,6 +28,6 @@ Object {
       },
     },
   },
-  "schema": "https://data.stackables.io/test-account?introspection=ab68132b-a320-489b-bfa4-2c938f20784e",
+  "schema": "https://data.stackables.io/stackables-test/webhooks?introspection=a89751eb-ef0d-4663-9530-fa683b9d8483",
 }
 `;

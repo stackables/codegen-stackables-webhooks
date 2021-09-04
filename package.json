@@ -23,6 +23,7 @@
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
+    "axios": "^0.21.2",
     "jest": "^27.1.0",
     "semantic-release": "^17.4.7",
     "ts-jest": "^27.0.5",
