@@ -40,5 +40,10 @@
   "bugs": {
     "url": "https://github.com/stackables/codegen-stackables-webhooks/issues"
   },
-  "homepage": "https://github.com/stackables/codegen-stackables-webhooks#readme"
+  "homepage": "https://github.com/stackables/codegen-stackables-webhooks#readme",
+  "dependencies": {
+    "@graphql-codegen/plugin-helpers": "^2.1.1",
+    "change-case-all": "^1.0.14",
+    "graphql": "^15.5.2"
+  }
 }
