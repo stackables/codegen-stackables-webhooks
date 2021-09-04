@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plugin generated wrapped types for provided documents with correct decorator 1`] = `
+"export type StackablesEnvelope<T> = { 
+    version: \\"0.1\\"
+    payload: T
+    params: any
+    callback: {
+      url: string
+      token: string
+    }
+  }
+export type Webhook1Handler = StackablesEnvelope<Webhook1Fragment>
+export type FragmentRegistry = {
+  'stackables.webhook.Webhook1': Webhook1Handler
+  }"
+`;
+
+exports[`Plugin generated wrapped types for provided documents with correct decorator 2`] = `
+"export type StackablesEnvelope<T> = { 
+    version: \\"0.1\\"
+    payload: T
+    params: any
+    callback: {
+      url: string
+      token: string
+    }
+  }
+export type Webhook2Handler = StackablesEnvelope<Webhook2>
+export type WebhookMap = {
+  'stackables.webhook.Webhook2': Webhook2Handler
+  }"
+`;
+
+exports[`Plugin generated wrapped types for provided documents with correct decorator 3`] = `
+"export type StackablesEnvelope<T> = { 
+    version: \\"0.1\\"
+    payload: T
+    params: any
+    callback: {
+      url: string
+      token: string
+    }
+  }
+export type IgnoreThisOneHandler = StackablesEnvelope<IgnoreThisOneFragment>
+export type Webhook1Handler = StackablesEnvelope<Webhook1Fragment>
+export type Webhook2Handler = StackablesEnvelope<Webhook2Fragment>
+export type FragmentRegistry = {
+  'stackables.webhook.IgnoreThisOne': IgnoreThisOneHandler
+  'stackables.webhook.Webhook1': Webhook1Handler
+  'stackables.webhook.Webhook2': Webhook2Handler
+  }"
+`;
