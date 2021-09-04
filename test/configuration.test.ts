@@ -4,7 +4,7 @@ import axios from 'axios'
 
 test('Configuration snapshot', () => {
     const config = getConfiguration({
-        accountSlug: 'stackables-test/webhooks',
+        accountSlug: 'stackables-demo:prod/example1',
         generatedFile: './src/generated/webhooks.ts',
         introspectionToken: 'a89751eb-ef0d-4663-9530-fa683b9d8483',
     })
@@ -14,7 +14,7 @@ test('Configuration snapshot', () => {
 
 test('Configuration introspection is working correctly', async () => {
     const { schema } = getConfiguration({
-        accountSlug: 'stackables-test/webhooks',
+        accountSlug: 'stackables-demo:prod/example1',
         generatedFile: './src/generated/webhooks.ts',
         introspectionToken: 'a89751eb-ef0d-4663-9530-fa683b9d8483',
     })

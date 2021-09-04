@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Loader 1`] = `
+Object {
+  "definitions": Array [
+    Object {
+      "directives": Array [
+        Object {
+          "arguments": Array [],
+          "kind": "Directive",
+          "loc": Object {
+            "end": 59,
+            "start": 50,
+          },
+          "name": Object {
+            "kind": "Name",
+            "loc": Object {
+              "end": 59,
+              "start": 51,
+            },
+            "value": "register",
+          },
+        },
+      ],
+      "kind": "FragmentDefinition",
+      "loc": Object {
+        "end": 68,
+        "start": 0,
+      },
+      "name": Object {
+        "kind": "Name",
+        "loc": Object {
+          "end": 31,
+          "start": 9,
+        },
+        "value": "CleanupAfterNodeDelete",
+      },
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "loc": Object {
+          "end": 68,
+          "start": 60,
+        },
+        "selections": Array [
+          Object {
+            "alias": undefined,
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "loc": Object {
+              "end": 66,
+              "start": 64,
+            },
+            "name": Object {
+              "kind": "Name",
+              "loc": Object {
+                "end": 66,
+                "start": 64,
+              },
+              "value": "id",
+            },
+            "selectionSet": undefined,
+          },
+        ],
+      },
+      "typeCondition": Object {
+        "kind": "NamedType",
+        "loc": Object {
+          "end": 49,
+          "start": 35,
+        },
+        "name": Object {
+          "kind": "Name",
+          "loc": Object {
+            "end": 49,
+            "start": 35,
+          },
+          "value": "DataEntityNode",
+        },
+      },
+    },
+  ],
+  "kind": "Document",
+  "loc": Object {
+    "end": 68,
+    "start": 0,
+  },
+}
+`;
