@@ -24,7 +24,7 @@ See full configuration reference at https://www.graphql-code-generator.com/docs/
 
 Plugin requires 3 configuration settings:
 - **Graphql schema** - Your graphql schema reference
-- **Fragment loader** - Fragments in filesystem (marked with special directive) or load fragments from stackables cloud directly
+- **Fragment loader** - Fragments in filesystem (marked with special decorator) or load fragments from stackables cloud directly
 - **Webhooks type generator** - Register plugin to generate type map for [cloudevents-router](https://github.com/stackables/cloudevents-router) package
 
 ### With Fragment loader
@@ -73,5 +73,5 @@ generates:
 
 ### Configuration options
 
-- fragmentRegistryName: StackablesEvents
-- fragmentRegistryDirective: register
+- **fragmentRegistryName:** StackablesEvents
+- **fragmentRegistryDirective:** register
