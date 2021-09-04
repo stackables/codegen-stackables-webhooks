@@ -69,7 +69,7 @@ generates:
       fragmentRegistryDirective: register
 ```
 
-**If you decide to NOT load the fragments dynamically you need to define the fragments for your webhooks manually (and keep them up to date with the service). [See instructions here]()**
+**If you decide to NOT load the fragments dynamically you need to define the fragments for your webhooks manually (and keep them up to date with the service). [See instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/fragments.md)**
 
 ### Configuration options
 

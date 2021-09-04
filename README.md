@@ -40,7 +40,7 @@ module.exports = getConfiguration({
 })
 ```
 
-[See full configuration options here]()
+[See full configuration options here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/config.md)
 
 ## Usage
 
@@ -73,16 +73,16 @@ server.listen(5000);
 
 ## Advanced Usage
 
-- [Payload structure]()
-- [Provided configuration]()
-- [Callback tokens]()
-- [Branches]()
+- [Payload structure](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
+- [Provided configuration](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
+- [Callback tokens](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
+- [Branches](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
 
 ## Deployment options
 
-You can deploy the created web service anywhere as long as its publicly accessible. **But,** You need to ensure that you validate the Stackables JWT token. [Instructions here]()
+You can deploy the created web service anywhere as long as its publicly accessible. **But,** You need to ensure that you validate the Stackables JWT token. [Instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/deploy.md)
 
-You can also use Stackables cloud to host your webhooks, in this case authentication and scaling is taken care of by us. [Instructions here]()
+You can also use Stackables cloud to host your webhooks, in this case authentication and scaling is taken care of by us. [Instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/deploy.md)
 
 ## Thats it ...
 
