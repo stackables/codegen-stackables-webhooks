@@ -7,7 +7,7 @@ We also provide a simple utility to help with the verbosity. But you can always 
 `graphql.config.js` in repository root
 
 ```js
-const { getConfiguration } = require('stackables-webhooks');
+const { getConfiguration } = require('codegen-stackables-webhooks');
 
 // Returned configuration is just a plain object
 // So if needed you can add or modify the returned setting as needed
@@ -33,10 +33,10 @@ Plugin requires 3 configuration settings:
 `codegen.yml` in repository root
 
 ```yml
-schema: https://data.stackables.io/stackables/cloud?introspection=<token>
+schema: https://data.stackables.io/stackables-test/webhooks?introspection=<token>
 documents:
-- "https://data.stackables.io/stackables/cloud?introspection=<token>":
-  loader: "stackables-webhooks/loader"
+- "https://data.stackables.io/stackables-test/webhooks?introspection=<token>":
+  loader: "codegen-stackables-webhooks"
 generates:
   ./src/cloudevents.ts:
     plugins:
@@ -55,7 +55,7 @@ generates:
 `codegen.yml` in repository root
 
 ```yml
-schema: https://data.stackables.io/stackables/cloud?introspection=<token>
+schema: https://data.stackables.io/stackables-test/webhooks?introspection=<token>
 documents: **/*.gql
 generates:
   ./src/cloudevents.ts:
@@ -70,7 +70,7 @@ generates:
       fragmentRegistryDirective: register
 ```
 
-**If you decide to NOT load the fragments dynamically you need to define the fragments for your webhooks manually (and keep them up to date with the service). [See instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/fragments.md)**
+**If you decide to NOT load the fragments dynamically you need to define the fragments for your webhooks manually (and keep them up to date with the service). [See instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/fragments.md)**
 
 ### Configuration options
 

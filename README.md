@@ -17,7 +17,7 @@ npm install --save-dev @graphql-codegen/typescript
 npm install --save-dev @graphql-codegen/typescript-operations
 
 # webhooks plugin
-npm install --save-dev codegen-stackables-webhooks@beta
+npm install --save-dev codegen-stackables-webhooks
 ```
 
 ## Configuration
@@ -29,7 +29,7 @@ We also provide a simple utility to help with the verbosity. But you can always 
 `graphql.config.js` in repository root
 
 ```js
-const { getConfiguration } = require('stackables-webhooks');
+const { getConfiguration } = require('codegen-stackables-webhooks');
 
 // Returned configuration is just a plain object
 // So if needed you can add or modify the returned setting as needed
@@ -41,7 +41,7 @@ module.exports = getConfiguration({
 })
 ```
 
-[See full configuration options here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/config.md)
+[See full configuration options here](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/config.md)
 
 ## Usage
 
@@ -74,16 +74,16 @@ server.listen(5000);
 
 ## Advanced Usage
 
-- [Payload structure](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
-- [Provided configuration](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
-- [Callback tokens](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
-- [Branches](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/advanced.md)
+- [Payload structure](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/advanced.md)
+- [Provided configuration](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/advanced.md)
+- [Callback tokens](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/advanced.md)
+- [Branches](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/advanced.md)
 
 ## Deployment options
 
-You can deploy the created web service anywhere as long as its publicly accessible. **But,** You need to ensure that you validate the Stackables JWT token. [Instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/deploy.md)
+You can deploy the created web service anywhere as long as its publicly accessible. **But,** You need to ensure that you validate the Stackables JWT token. [Instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/deploy.md)
 
-You can also use Stackables cloud to host your webhooks, in this case authentication and scaling is taken care of by us. [Instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/beta/docs/deploy.md)
+You can also use Stackables cloud to host your webhooks, in this case authentication and scaling is taken care of by us. [Instructions here](https://github.com/stackables/codegen-stackables-webhooks/blob/main/docs/deploy.md)
 
 ## Thats it ...
 

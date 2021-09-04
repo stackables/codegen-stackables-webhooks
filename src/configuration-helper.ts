@@ -15,7 +15,7 @@ export function getConfiguration(opts: ConfigurationOptions) {
                         documents: [
                             {
                                 [schemaUrl]: {
-                                    loader: 'stackables-webhooks/loader',
+                                    loader: 'codegen-stackables-webhooks',
                                 },
                             },
                         ],
