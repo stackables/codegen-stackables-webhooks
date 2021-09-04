@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Configuration snapshot 1`] = `
+Object {
+  "extensions": Object {
+    "codegen": Object {
+      "generates": Object {
+        "./src/generated/webhooks.ts": Object {
+          "config": Object {
+            "fragmentRegistryDirective": "register",
+            "fragmentRegistryName": "StackablesEvents",
+            "onlyOperationTypes": true,
+            "preResolveTypes": true,
+          },
+          "documents": Array [
+            Object {
+              "https://data.stackables.io/test-account?introspection=ab68132b-a320-489b-bfa4-2c938f20784e": Object {
+                "loader": "stackables-webhooks/loader",
+              },
+            },
+          ],
+          "plugins": Array [
+            "typescript",
+            "typescript-operations",
+            "stackables-webhooks",
+          ],
+        },
+      },
+    },
+  },
+  "schema": "https://data.stackables.io/test-account?introspection=ab68132b-a320-489b-bfa4-2c938f20784e",
+}
+`;

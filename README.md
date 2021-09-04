@@ -35,8 +35,9 @@ const { getConfiguration } = require('stackables-webhooks');
 // So if needed you can add or modify the returned setting as needed
 
 module.exports = getConfiguration({
-    account: '<account>',
-    token:'<token>'
+    generatedFile: "<string>",
+    accountSlug: "<string>",
+    introspectionToken: "<string>"
 })
 ```
 

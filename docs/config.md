@@ -13,8 +13,9 @@ const { getConfiguration } = require('stackables-webhooks');
 // So if needed you can add or modify the returned setting as needed
 
 module.exports = getConfiguration({
-    account: '<account>',
-    token:'<token>'
+    generatedFile: "<string>",
+    accountSlug: "<string>",
+    introspectionToken: "<string>"
 })
 ```
 
@@ -35,7 +36,7 @@ Plugin requires 3 configuration settings:
 schema: https://data.stackables.io/stackables/cloud?introspection=<token>
 documents:
 - "https://data.stackables.io/stackables/cloud?introspection=<token>":
-  loader: "stackables-webhooks/loader.ts"
+  loader: "stackables-webhooks/loader"
 generates:
   ./src/cloudevents.ts:
     plugins:
