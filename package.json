@@ -1,0 +1,23 @@
+{
+  "name": "codegen-stackables-webhooks",
+  "version": "1.0.0",
+  "description": "GraphQL Code Generator plugin for Stackables webhooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackables/codegen-stackables-webhooks.git"
+  },
+  "keywords": [
+    "stackables",
+    "webhooks"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stackables/codegen-stackables-webhooks/issues"
+  },
+  "homepage": "https://github.com/stackables/codegen-stackables-webhooks#readme"
+}
