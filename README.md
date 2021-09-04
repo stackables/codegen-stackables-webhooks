@@ -1,2 +1,2 @@
-# codegen-stackables-webhooks
+# Stackables Webhooks
 GraphQL Code Generator plugin for Stackables webhooks
