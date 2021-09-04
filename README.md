@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/npm/v/codegen-stackables-webhooks?label=codegen-stackables-webhooks&logo=npm)](https://www.npmjs.com/package/codegen-stackables-webhooks)
+[![codecov](https://codecov.io/gh/stackables/codegen-stackables-webhooks/branch/main/graph/badge.svg?token=CDSWILU8I6)](https://codecov.io/gh/stackables/codegen-stackables-webhooks)
+
 # Stackables Webhooks
 
 GraphQL Code Generator plugin for Stackables webhooks.
