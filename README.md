@@ -38,7 +38,7 @@ const { getConfiguration } = require('codegen-stackables-webhooks');
 // So if needed you can add or modify the returned setting as needed
 
 module.exports = getConfiguration({
-    generatedFile: "<string>",
+    generatedFile: "./src/generated/webhooks.ts",
     accountSlug: "<string>",
     introspectionToken: "<string>"
 })
@@ -52,9 +52,9 @@ Generated types are easy to use with [cloudevents-router](https://github.com/sta
 
 ```typescript
 import { CloudEventsRouter } from 'cloudevents-router'
-import { FragmentRegistry } from './src/generated/webhooks'
+import { StackablesEvents } from './src/generated/webhooks'
 
-const router = new CloudEventsRouter<FragmentRegistry>()
+const router = new CloudEventsRouter<StackablesEvents>()
 
 router.on('stackables.webhook.v1.YourHookName', async (event) => {
     console.log('Received typed webhook', event.data)
