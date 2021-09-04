@@ -10,6 +10,12 @@ test('Plugin generated wrapped types for provided documents with correct decorat
     // Generate test documents
     const fragments = await loadDocuments(`
     
+    query ToBeIgnored {
+        TestType {
+            ...IgnoreThisOne
+        }
+    }
+
     fragment IgnoreThisOne on TestType {
         id
     }
@@ -25,18 +31,15 @@ test('Plugin generated wrapped types for provided documents with correct decorat
 
     `, {} as any)
 
-    const output1 = plugin(schema, fragments, {
-        fragmentRegistryDirective: 'generate1',
-        omitOperationSuffix: false
-    })
+    // output configuration 1
+    const output1 = plugin(schema, fragments, { fragmentRegistryDirective: 'generate1', omitOperationSuffix: false })
     expect(output1).toMatchSnapshot()
 
-    const output2 = plugin(schema, fragments, {
-        fragmentRegistryDirective: 'generate2',
-        omitOperationSuffix: true
-    })
+    // output configuration 2
+    const output2 = plugin(schema, fragments, { fragmentRegistryDirective: 'generate2', omitOperationSuffix: true, fragmentRegistryName: 'WebhookMap' })
     expect(output2).toMatchSnapshot()
 
+    // output configuration 3
     const output3 = plugin(schema, fragments, {})
     expect(output3).toMatchSnapshot()
 })

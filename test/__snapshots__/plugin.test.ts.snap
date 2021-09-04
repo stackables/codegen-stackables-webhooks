@@ -27,7 +27,7 @@ exports[`Plugin generated wrapped types for provided documents with correct deco
     }
   }
 export type Webhook2Handler = StackablesEnvelope<Webhook2>
-export type FragmentRegistry = {
+export type WebhookMap = {
   'stackables.webhook.Webhook2': Webhook2Handler
   }"
 `;

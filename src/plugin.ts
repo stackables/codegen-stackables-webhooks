@@ -12,7 +12,8 @@ function filterByDirective(directives: readonly DirectiveNode[] | undefined, nee
   // if no restriction specified then list all
   if (!needed) return true
 
-  // if no directive found then we cannot restrict
+  // TODO: Investigate under what circumstances can it actually be undefined?
+  /* istanbul ignore next */
   if (!directives) return false
 
   for (let index = 0; index < directives.length; index++) {
