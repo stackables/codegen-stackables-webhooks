@@ -11,7 +11,7 @@
     "webhooks"
   ],
   "files": [
-    "build"
+    "build/*"
   ],
   "scripts": {
     "prepack": "tsc",
@@ -19,6 +19,7 @@
     "semantic-release": "semantic-release -b main"
   },
   "devDependencies": {
+    "@graphql-tools/load": "^7.2.0",
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
@@ -44,6 +45,7 @@
   "dependencies": {
     "@graphql-codegen/plugin-helpers": "^2.1.1",
     "change-case-all": "^1.0.14",
-    "graphql": "^15.5.2"
+    "graphql": "^15.5.2",
+    "graphql-request": "^3.5.0"
   }
 }

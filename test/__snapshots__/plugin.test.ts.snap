@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plugin generated wrapped types for provided documents with correct decorator 1`] = `
+"export type StackablesEnvelope<T> = { 
+    version: \\"0.1\\"
+    payload: T
+    params: any
+    callback: {
+      url: string
+      token: string
+    }
+  }
+export type Webhook1Handler = StackablesEnvelope<Webhook1Fragment>
+export type FragmentRegistry = {
+  'stackables.webhook.Webhook1': Webhook1Handler
+  }"
+`;

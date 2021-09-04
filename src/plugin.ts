@@ -27,7 +27,7 @@ function filterByDirective(directives: readonly DirectiveNode[] | undefined, nee
   return false
 }
 
-export const plugin: PluginFunction<never, string> = (
+export const plugin: PluginFunction<NamedOperationsObjectPluginConfig, string> = (
   schema: GraphQLSchema,
   documents: Types.DocumentFile[],
   config: NamedOperationsObjectPluginConfig
