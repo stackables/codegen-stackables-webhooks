@@ -71,6 +71,13 @@ const server = http.createServer(middleware)
 server.listen(5000);
 ```
 
+## Advanced Usage
+
+- [Payload structure]()
+- [Provided configuration]()
+- [Callback tokens]()
+- [Branches]()
+
 ## Deployment options
 
 You can deploy the created web service anywhere as long as its publicly accessible. **But,** You need to ensure that you validate the Stackables JWT token. [Instructions here]()
