@@ -44,3 +44,39 @@ module.exports = getConfiguration({
 
 ## Usage
 
+Generated types are easy to use with [cloudevents-router](https://github.com/stackables/cloudevents-router) package.
+
+```typescript
+import { CloudEventsRouter } from 'cloudevents-router'
+import { FragmentRegistry } from './src/generated/webhooks'
+
+const router = new CloudEventsRouter<FragmentRegistry>()
+
+router.on('stackables.webhook.v1.YourHookName', async (event) => {
+    console.log('Received typed webhook', event.data)
+})
+```
+
+See more options on how to use the router with different web servers [here](https://github.com/stackables/cloudevents-router). But simplest is to just use nodejs built in web server like this:
+
+```typescript
+import http from "http"
+import { getMiddleware } from "cloudevents-router"
+
+// const router = ... 
+
+const middleware = getMiddleware(router, { path: '/' })
+const server = http.createServer(middleware)
+
+server.listen(5000);
+```
+
+## Deployment options
+
+You can deploy the created web service anywhere as long as its publicly accessible. **But,** You need to ensure that you validate the Stackables JWT token. [Instructions here]()
+
+You can also use Stackables cloud to host your webhooks, in this case authentication and scaling is taken care of by us. [Instructions here]()
+
+## Thats it ...
+
+... happy coding :)
