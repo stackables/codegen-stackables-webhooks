@@ -1,6 +1,6 @@
-import { getConfiguration } from '../src'
+import axios from 'axios';
 import { buildClientSchema, getIntrospectionQuery } from 'graphql';
-import axios from 'axios'
+import { getConfiguration } from '../src';
 
 test('Configuration snapshot', () => {
     const config = getConfiguration({
@@ -19,12 +19,8 @@ test('Configuration introspection is working correctly', async () => {
         introspectionToken: 'a89751eb-ef0d-4663-9530-fa683b9d8483',
     })
 
-    const { data } = await axios({
-        url: schema,
-        method: 'post',
-        data: {
-            query: getIntrospectionQuery()
-        }
+    const { data } = await axios.post<any>(schema, {
+        query: getIntrospectionQuery()
     })
 
     buildClientSchema(data.data)
