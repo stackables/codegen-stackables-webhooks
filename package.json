@@ -22,7 +22,7 @@
     "@graphql-tools/load": "^7.3.2",
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.0.2",
-    "@types/node": "^16.10.2",
+    "@types/node": "^17.0.5",
     "axios": "^0.22.0",
     "jest": "^27.2.4",
     "semantic-release": "^18.0.0",
