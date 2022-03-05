@@ -1,5 +1,5 @@
 import { parse } from 'graphql';
-import { GraphQLClient, gql } from 'graphql-request'
+import { gql, GraphQLClient } from 'graphql-request';
 
 export default async function (endpoint: string) {
 
@@ -10,8 +10,8 @@ export default async function (endpoint: string) {
       Webhook {
         list {
           name
-          query
-          entity: entity2 {
+          fragment
+          entity {
             id
           }
         }
@@ -22,5 +22,5 @@ export default async function (endpoint: string) {
   const data = await graphQLClient.request(query)
   const fragments = data.Webhook.list;
 
-  return parse(fragments.map((f: any) => `fragment ${f.name} on ${f.entity.id} @register ${f.query}`).join('\n'));
+  return parse(fragments.map((f: any) => `fragment ${f.name} on ${f.entity.id} @register ${f.fragment}`).join('\n'));
 };
