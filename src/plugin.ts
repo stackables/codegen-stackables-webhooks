@@ -1,6 +1,6 @@
-import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers';
-import { GraphQLSchema, concatAST, visit, DocumentNode, DirectiveNode } from 'graphql';
+import { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
 import { capitalCase } from 'change-case-all';
+import { concatAST, DirectiveNode, DocumentNode, GraphQLSchema, visit } from 'graphql';
 
 interface NamedOperationsObjectPluginConfig {
   fragmentRegistryName?: string
@@ -41,12 +41,10 @@ export const plugin: PluginFunction<NamedOperationsObjectPluginConfig, string> =
   const fragments: string[] = []
 
   visit(allAst, {
-    enter: {
-      FragmentDefinition: node => {
-        if (filterByDirective(node.directives, config.fragmentRegistryDirective)) {
-          fragments.push(capitalCase(node.name.value, { delimiter: '' }))
-        }
-      },
+    FragmentDefinition: node => {
+      if (filterByDirective(node.directives, config.fragmentRegistryDirective)) {
+        fragments.push(capitalCase(node.name.value, { delimiter: '' }))
+      }
     },
   });
 
