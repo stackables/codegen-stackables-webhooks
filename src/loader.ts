@@ -7,7 +7,7 @@ export default async function (endpoint: string) {
 
   const query = gql`
     query CodeGenWebhooks {
-      Webhook {
+      Webhook: _Webhook {
         list {
           name
           fragment
