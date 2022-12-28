@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/stackables/codegen-stackables-webhooks#readme",
   "dependencies": {
-    "@graphql-codegen/plugin-helpers": "^2.1.1",
+    "@graphql-codegen/plugin-helpers": "^3.1.2",
     "change-case-all": "^1.0.14",
     "graphql": "^16.0.0",
     "graphql-request": "^4.0.0"
