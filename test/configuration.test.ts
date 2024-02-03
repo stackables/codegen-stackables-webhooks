@@ -1,27 +1,29 @@
-import axios from 'axios';
-import { buildClientSchema, getIntrospectionQuery } from 'graphql';
-import { getConfiguration } from '../src';
+import axios from "axios";
+import { buildClientSchema, getIntrospectionQuery } from "graphql";
+import { getConfiguration } from "../src";
 
-test('Configuration snapshot', () => {
-    const config = getConfiguration({
-        accountSlug: 'stackables-demo:prod/example1',
-        generatedFile: './src/generated/webhooks.ts',
-        introspectionToken: 'a89751eb-ef0d-4663-9530-fa683b9d8483',
-    })
+test("Configuration snapshot", () => {
+	const config = getConfiguration({
+		accountSlug: "stackables-demo:prod/example1",
+		generatedFile: "./src/generated/webhooks.ts",
+		introspectionToken: "a89751eb-ef0d-4663-9530-fa683b9d8483",
+		bearerToken: "",
+	});
 
-    expect(config).toMatchSnapshot()
-})
+	expect(config).toMatchSnapshot();
+});
 
-test.skip('Configuration introspection is working correctly', async () => {
-    const { schema } = getConfiguration({
-        accountSlug: 'stackables-demo:prod/example1',
-        generatedFile: './src/generated/webhooks.ts',
-        introspectionToken: 'a89751eb-ef0d-4663-9530-fa683b9d8483',
-    })
+test.skip("Configuration introspection is working correctly", async () => {
+	const { schema } = getConfiguration({
+		accountSlug: "stackables-demo:prod/example1",
+		generatedFile: "./src/generated/webhooks.ts",
+		introspectionToken: "a89751eb-ef0d-4663-9530-fa683b9d8483",
+		bearerToken: "",
+	});
 
-    const { data } = await axios.post<any>(schema, {
-        query: getIntrospectionQuery()
-    })
+	const { data } = await axios.post<any>(schema, {
+		query: getIntrospectionQuery(),
+	});
 
-    buildClientSchema(data.data)
-})
+	buildClientSchema(data.data);
+});

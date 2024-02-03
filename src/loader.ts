@@ -1,26 +1,40 @@
-import { parse } from 'graphql';
-import { gql, GraphQLClient } from 'graphql-request';
+import { parse } from "graphql";
+import { gql, GraphQLClient } from "graphql-request";
 
-export default async function (endpoint: string) {
+export default async function (
+	endpoint: string,
+	_: unknown,
+	{ bearerToken }: { bearerToken: string }
+) {
+	const graphQLClient = new GraphQLClient(endpoint, {
+		headers: {
+			authorization: `Bearer ${bearerToken}`,
+		},
+	});
 
-  const graphQLClient = new GraphQLClient(endpoint)
+	const query = gql`
+		query CodeGenWebhooks {
+			Webhook: _Webhook {
+				list {
+					name
+					fragment
+					entity {
+						id
+					}
+				}
+			}
+		}
+	`;
 
-  const query = gql`
-    query CodeGenWebhooks {
-      Webhook: _Webhook {
-        list {
-          name
-          fragment
-          entity {
-            id
-          }
-        }
-      }
-    }
-  `
+	const data = await graphQLClient.request(query);
+	const fragments = data.Webhook.list;
 
-  const data = await graphQLClient.request(query)
-  const fragments = data.Webhook.list;
-
-  return parse(fragments.map((f: any) => `fragment ${f.name} on ${f.entity.id} @register ${f.fragment}`).join('\n'));
-};
+	return parse(
+		fragments
+			.map(
+				(f: any) =>
+					`fragment ${f.name} on ${f.entity.id} @register ${f.fragment}`
+			)
+			.join("\n")
+	);
+}
