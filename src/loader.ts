@@ -4,11 +4,11 @@ import { gql, GraphQLClient } from "graphql-request";
 export default async function (
 	endpoint: string,
 	_: unknown,
-	{ bearerToken }: { bearerToken: string }
+	conf: Record<string, { bearerToken: string }>
 ) {
 	const graphQLClient = new GraphQLClient(endpoint, {
 		headers: {
-			authorization: `Bearer ${bearerToken}`,
+			authorization: `Bearer ${conf[endpoint].bearerToken}`,
 		},
 	});
 
