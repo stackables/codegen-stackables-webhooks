@@ -26,7 +26,7 @@ export default async function (
 		}
 	`;
 
-	const data = await graphQLClient.request(query);
+	const data = await graphQLClient.request<any>(query);
 	const fragments = data.Webhook.list;
 
 	return parse(
