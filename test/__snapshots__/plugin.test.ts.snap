@@ -2,7 +2,7 @@
 
 exports[`Plugin generated wrapped types for provided documents with correct decorator 1`] = `
 "export type StackablesEnvelope<T> = { 
-    version: \\"0.1\\"
+    version: "0.1"
     payload: T
     params: any
     callback: {
@@ -18,7 +18,7 @@ export type FragmentRegistry = {
 
 exports[`Plugin generated wrapped types for provided documents with correct decorator 2`] = `
 "export type StackablesEnvelope<T> = { 
-    version: \\"0.1\\"
+    version: "0.1"
     payload: T
     params: any
     callback: {
@@ -34,7 +34,7 @@ export type WebhookMap = {
 
 exports[`Plugin generated wrapped types for provided documents with correct decorator 3`] = `
 "export type StackablesEnvelope<T> = { 
-    version: \\"0.1\\"
+    version: "0.1"
     payload: T
     params: any
     callback: {
