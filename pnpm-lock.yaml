@@ -9,8 +9,8 @@ dependencies:
     specifier: ^5.0.1
     version: 5.0.1(graphql@16.8.1)
   change-case-all:
-    specifier: ^1.0.14
-    version: 1.0.15
+    specifier: ^2.0.1
+    version: 2.0.1
   graphql:
     specifier: ^16.8.1
     version: 16.8.1
@@ -1427,6 +1427,15 @@ packages:
       upper-case-first: 2.0.2
     dev: false
 
+  /change-case-all@2.0.1:
+    resolution: {integrity: sha512-g0R2kg7VJCXu2X1COIZY6+sFuoNUUrM5+IL5d5UL3/ipDurVW048PIFdb4o4LpBcn4jRcWO6jDpC5CPPLPvD/A==}
+    dependencies:
+      change-case: 5.4.2
+      sponge-case: 2.0.3
+      swap-case: 3.0.3
+      title-case: 3.0.3
+    dev: false
+
   /change-case@4.1.2:
     resolution: {integrity: sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==}
     dependencies:
@@ -1442,6 +1451,10 @@ packages:
       sentence-case: 3.0.4
       snake-case: 3.0.4
       tslib: 2.6.2
+    dev: false
+
+  /change-case@5.4.2:
+    resolution: {integrity: sha512-WB3UiTDpT+vrTilAWaJS4gaIH/jc1He4H9f6erQvraUYas90uWT0JOYFkG1imdNv710XJ6gJvqynrgOHc4ihDA==}
     dev: false
 
   /char-regex@1.0.2:
@@ -3788,6 +3801,10 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /sponge-case@2.0.3:
+    resolution: {integrity: sha512-i4h9ZGRfxV6Xw3mpZSFOfbXjf0cQcYmssGWutgNIfFZ2VM+YIWfD71N/kjjwK6X/AAHzBr+rciEcn/L34S8TGw==}
+    dev: false
+
   /sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
@@ -3904,6 +3921,10 @@ packages:
     resolution: {integrity: sha512-kc6S2YS/2yXbtkSMunBtKdah4VFETZ8Oh6ONSmSd9bRxhqTrtARUCBUiWXH3xVPpvR7tz2CSnkuXVE42EcGnMw==}
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /swap-case@3.0.3:
+    resolution: {integrity: sha512-6p4op8wE9CQv7uDFzulI6YXUw4lD9n4oQierdbFThEKVWVQcbQcUjdP27W8XE7V4QnWmnq9jueSHceyyQnqQVA==}
     dev: false
 
   /temp-dir@3.0.0:
