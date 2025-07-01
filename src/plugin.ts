@@ -43,7 +43,7 @@ export const plugin: PluginFunction<NamedOperationsObjectPluginConfig, string> =
   visit(allAst, {
     FragmentDefinition: node => {
       if (filterByDirective(node.directives, config.fragmentRegistryDirective)) {
-        fragments.push(capitalCase(node.name.value, { delimiter: '' }))
+        fragments.push(node.name.value)
       }
     },
   });
