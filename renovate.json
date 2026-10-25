@@ -7,9 +7,5 @@
       "matchPackageNames": ["*"],
       "semanticCommitType": "chore"
     }
-  ],
-  "lockFileMaintenance": {
-    "description": "CI installs with npm, not from pnpm-lock.yaml, so refreshing it changes nothing that runs",
-    "enabled": false
-  }
+  ]
 }
