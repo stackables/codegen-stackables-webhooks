@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>stackables/renovate-config"],
+  "packageRules": [
+    {
+      "description": "semantic-release publishes on fix: a lockfile the package does not ship changes nothing for its users, so updates are chore and release nothing",
+      "matchPackageNames": ["*"],
+      "semanticCommitType": "chore"
+    }
+  ],
+  "lockFileMaintenance": {
+    "description": "CI installs with npm, not from pnpm-lock.yaml, so refreshing it changes nothing that runs",
+    "enabled": false
+  }
+}
