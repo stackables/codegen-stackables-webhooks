@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"@graphql-tools/load": "^8.0.1",
-		"@tsconfig/node16": "^16.1.1",
+		"@tsconfig/node18": "^18.2.0",
 		"@types/jest": "^29.5.12",
 		"@types/node": "^20.11.16",
 		"axios": "^1.6.7",

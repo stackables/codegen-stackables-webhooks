@@ -24,9 +24,9 @@ importers:
       '@graphql-tools/load':
         specifier: ^8.0.1
         version: 8.0.1(graphql@16.8.1)
-      '@tsconfig/node16':
-        specifier: ^16.1.1
-        version: 16.1.1
+      '@tsconfig/node18':
+        specifier: ^18.2.0
+        version: 18.2.7
       '@types/jest':
         specifier: ^29.5.12
         version: 29.5.12
@@ -498,8 +498,8 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
-  '@tsconfig/node16@16.1.1':
-    resolution: {integrity: sha512-+pio93ejHN4nINX4pXqfnR/fPLRtJBaT4ORaa5RH0Oc1zoYmo2B2koG+M328CQhHKn1Wj6FcOxCDFXAot9NhvA==}
+  '@tsconfig/node18@18.2.7':
+    resolution: {integrity: sha512-UyenTORreCUh8MKh2qbLGGHTRrxjBbSwvX0ZoWs6Jx1jrNS62PXEA3+VaLvmb0YDQrgGU3v3h7zB9Xs/BN1ozg==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -3081,7 +3081,7 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@tsconfig/node16@16.1.1': {}
+  '@tsconfig/node18@18.2.7': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
