@@ -1,5 +1,5 @@
 ---
-"codegen-stackables-webhooks": major
+"codegen-stackables-webhooks": patch
 ---
 
-Requires Node.js 22.15 or newer: the plugin now runs on `@graphql-codegen/plugin-helpers` 7, `graphql-request` 7 and `change-case-all` 2, and `@graphql-codegen/plugin-helpers` 7 needs that Node. The generated output and the plugin's configuration are unchanged.
+Moves the runtime dependencies to their current majors (`@graphql-codegen/plugin-helpers` 7, `graphql-request` 7, `change-case-all` 2); the generated output and the configuration are unchanged.
