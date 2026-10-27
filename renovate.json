@@ -4,6 +4,12 @@
   "semanticCommits": "disabled",
   "packageRules": [
     {
+      "description": "Widen the ranges of the published package on a major update, so users on a dependency's old major keep working without changing anything",
+      "matchFileNames": ["package.json"],
+      "matchDepTypes": ["dependencies", "peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
       "description": "Coverage (jest) and CodeQL check every update",
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
