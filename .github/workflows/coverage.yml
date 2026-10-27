@@ -4,8 +4,13 @@ on: [push, pull_request]
 
 jobs:
   release:
-    name: Coverage
+    name: Coverage (graphql ${{ matrix.graphql }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # The lockfile resolves graphql 17; the package also accepts 16, so the tests run on both.
+        graphql: [17, 16]
     permissions:
       contents: read
       id-token: write
@@ -20,14 +25,24 @@ jobs:
           cache: true
           require-lockfile: true
       - name: Install dependencies
+        if: matrix.graphql == 17
         run: pnpm install --frozen-lockfile
+      - name: Install dependencies with graphql 16
+        if: matrix.graphql == 16
+        run: |
+          printf 'overrides:\n  graphql: 16.14.2\n' >> pnpm-workspace.yaml
+          pnpm install --no-frozen-lockfile
+          test "$(node -p 'require("graphql/package.json").version')" = 16.14.2
       - name: Knip
+        if: matrix.graphql == 17
         run: pnpm knip
       - name: Knip (production)
+        if: matrix.graphql == 17
         run: pnpm knip --production
       - name: Run the tests
         run: pnpm test:coverage
       - name: Upload coverage to Codecov
+        if: matrix.graphql == 17
         uses: codecov/codecov-action@v7
         with:
           files: lcov.info
