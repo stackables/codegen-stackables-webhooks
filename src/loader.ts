@@ -1,32 +1,52 @@
 import { parse } from "graphql";
-import { gql, GraphQLClient } from "graphql-request";
+
+const query = `
+	query CodeGenWebhooks {
+		Webhook: _Webhook {
+			list {
+				name
+				fragment
+				entity {
+					id
+				}
+			}
+		}
+	}
+`;
 
 export default async function (
 	endpoint: string,
 	_: unknown,
 	conf: Record<string, { bearerToken: string }>
 ) {
-	const graphQLClient = new GraphQLClient(endpoint, {
+	const response = await fetch(endpoint, {
+		method: "POST",
 		headers: {
+			"content-type": "application/json",
 			authorization: `Bearer ${conf[endpoint].bearerToken}`,
 		},
+		body: JSON.stringify({ query }),
 	});
 
-	const query = gql`
-		query CodeGenWebhooks {
-			Webhook: _Webhook {
-				list {
-					name
-					fragment
-					entity {
-						id
-					}
-				}
-			}
-		}
-	`;
+	if (!response.ok) {
+		throw new Error(
+			`Loading webhooks from ${endpoint} failed: HTTP ${response.status} ${response.statusText}`
+		);
+	}
 
-	const data = await graphQLClient.request<any>(query);
+	const { data, errors } = (await response.json()) as {
+		data?: any;
+		errors?: { message: string }[];
+	};
+
+	if (errors?.length) {
+		throw new Error(
+			`Loading webhooks from ${endpoint} failed: ${errors
+				.map((e) => e.message)
+				.join("; ")}`
+		);
+	}
+
 	const fragments = data.Webhook.list;
 
 	return parse(

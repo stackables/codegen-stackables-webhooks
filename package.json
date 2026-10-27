@@ -13,6 +13,9 @@
 	"files": [
 		"build/*"
 	],
+	"engines": {
+		"node": ">=22"
+	},
 	"scripts": {
 		"prepack": "tsc",
 		"test": "node --experimental-transform-types --test test/*.test.ts",
@@ -44,7 +47,6 @@
 	"dependencies": {
 		"@graphql-codegen/plugin-helpers": "^7.4.2",
 		"change-case-all": "^2.1.0",
-		"graphql": "^16.8.1",
-		"graphql-request": "^7.4.0"
+		"graphql": "^16.8.1 || ^17"
 	}
 }
