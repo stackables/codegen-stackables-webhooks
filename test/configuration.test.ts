@@ -1,8 +1,9 @@
 import axios from "axios";
 import { buildClientSchema, getIntrospectionQuery } from "graphql";
-import { getConfiguration } from "../src";
+import { test } from "node:test";
+import { getConfiguration } from "../src/index.ts";
 
-test("Configuration snapshot", () => {
+test("Configuration snapshot", (t) => {
 	const config = getConfiguration({
 		accountSlug: "stackables-demo:prod/example1",
 		generatedFile: "./src/generated/webhooks.ts",
@@ -10,10 +11,10 @@ test("Configuration snapshot", () => {
 		bearerToken: "",
 	});
 
-	expect(config).toMatchSnapshot();
+	t.assert.snapshot(config);
 });
 
-test.skip("Configuration introspection is working correctly", async () => {
+test("Configuration introspection is working correctly", { skip: true }, async () => {
 	const { schema } = getConfiguration({
 		accountSlug: "stackables-demo:prod/example1",
 		generatedFile: "./src/generated/webhooks.ts",

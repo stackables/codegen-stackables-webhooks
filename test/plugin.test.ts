@@ -1,8 +1,8 @@
-import { Types } from '@graphql-codegen/plugin-helpers'
-import { plugin } from '../src'
 import { loadDocuments } from '@graphql-tools/load'
+import { test } from 'node:test'
+import { plugin } from '../src/index.ts'
 
-test('Plugin generated wrapped types for provided documents with correct decorator', async () => {
+test('Plugin generated wrapped types for provided documents with correct decorator', async (t) => {
 
     // Schema is not used for index generation
     const schema = undefined as any
@@ -33,13 +33,13 @@ test('Plugin generated wrapped types for provided documents with correct decorat
 
     // output configuration 1
     const output1 = plugin(schema, fragments, { fragmentRegistryDirective: 'generate1', omitOperationSuffix: false })
-    expect(output1).toMatchSnapshot()
+    t.assert.snapshot(output1)
 
     // output configuration 2
     const output2 = plugin(schema, fragments, { fragmentRegistryDirective: 'generate2', omitOperationSuffix: true, fragmentRegistryName: 'WebhookMap' })
-    expect(output2).toMatchSnapshot()
+    t.assert.snapshot(output2)
 
     // output configuration 3
     const output3 = plugin(schema, fragments, {})
-    expect(output3).toMatchSnapshot()
+    t.assert.snapshot(output3)
 })

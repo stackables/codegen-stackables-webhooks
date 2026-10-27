@@ -1,6 +1,6 @@
-import { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
+import type { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
 import { capitalCase } from 'change-case-all';
-import { concatAST, DirectiveNode, DocumentNode, GraphQLSchema, visit } from 'graphql';
+import { concatAST, visit, type DirectiveNode, type DocumentNode, type GraphQLSchema } from 'graphql';
 
 interface NamedOperationsObjectPluginConfig {
   fragmentRegistryName?: string

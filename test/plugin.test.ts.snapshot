@@ -1,0 +1,11 @@
+exports[`Plugin generated wrapped types for provided documents with correct decorator 1`] = `
+"export type StackablesEnvelope<T> = { \\n    version: \\"0.1\\"\\n    payload: T\\n    params: any\\n    callback: {\\n      url: string\\n      token: string\\n    }\\n  }\\nexport type Webhook1Handler = StackablesEnvelope<Webhook1Fragment>\\nexport type FragmentRegistry = {\\n  'stackables.webhook.Webhook1': Webhook1Handler\\n  }"
+`;
+
+exports[`Plugin generated wrapped types for provided documents with correct decorator 2`] = `
+"export type StackablesEnvelope<T> = { \\n    version: \\"0.1\\"\\n    payload: T\\n    params: any\\n    callback: {\\n      url: string\\n      token: string\\n    }\\n  }\\nexport type Webhook2Handler = StackablesEnvelope<Webhook2>\\nexport type WebhookMap = {\\n  'stackables.webhook.Webhook2': Webhook2Handler\\n  }"
+`;
+
+exports[`Plugin generated wrapped types for provided documents with correct decorator 3`] = `
+"export type StackablesEnvelope<T> = { \\n    version: \\"0.1\\"\\n    payload: T\\n    params: any\\n    callback: {\\n      url: string\\n      token: string\\n    }\\n  }\\nexport type IgnoreThisOneHandler = StackablesEnvelope<IgnoreThisOneFragment>\\nexport type Webhook1Handler = StackablesEnvelope<Webhook1Fragment>\\nexport type Webhook2Handler = StackablesEnvelope<Webhook2Fragment>\\nexport type FragmentRegistry = {\\n  'stackables.webhook.IgnoreThisOne': IgnoreThisOneHandler\\n  'stackables.webhook.Webhook1': Webhook1Handler\\n  'stackables.webhook.Webhook2': Webhook2Handler\\n  }"
+`;
