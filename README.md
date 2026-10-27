@@ -91,3 +91,7 @@ You can also use Stackables cloud to host your webhooks, in this case authentica
 ## Thats it ...
 
 ... happy coding :)
+
+## Releasing
+
+Run `pnpm changeset` and commit the generated file with your change. When it reaches `main`, the release workflow opens (or updates) a "Version Packages" PR; merging that PR publishes to npm. Renovate PRs add no changeset, so they release nothing.
