@@ -3,3 +3,4 @@ build
 coverage
 .DS_Store
 tmp
+lcov.info

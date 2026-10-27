@@ -26,9 +26,10 @@ jobs:
       - name: Knip (production)
         run: pnpm knip --production
       - name: Run the tests
-        run: pnpm test --coverage
+        run: pnpm test:coverage
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v7
         with:
+          files: lcov.info
           use_oidc: true
           fail_ci_if_error: true
