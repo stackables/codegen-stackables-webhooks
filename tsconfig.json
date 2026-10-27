@@ -6,6 +6,9 @@
         "strictNullChecks": true,
         "rewriteRelativeImportExtensions": true,
         "types": ["node"],
+        // change-case-all 2 ships its types only for ESM importers (its "exports" has no "types" for
+        // "require"), so the CommonJS build would see no types without this mapping.
+        "paths": { "change-case-all": ["./node_modules/change-case-all/dist/index.d.ts"] },
     },
     "include": [
         "src"
