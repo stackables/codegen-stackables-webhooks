@@ -1,0 +1,85 @@
+exports[`Test Loader 1`] = `
+{
+  "definitions": [
+    {
+      "directives": [
+        {
+          "arguments": [],
+          "kind": "Directive",
+          "loc": {
+            "end": 59,
+            "start": 50
+          },
+          "name": {
+            "kind": "Name",
+            "loc": {
+              "end": 59,
+              "start": 51
+            },
+            "value": "register"
+          }
+        }
+      ],
+      "kind": "FragmentDefinition",
+      "loc": {
+        "end": 68,
+        "start": 0
+      },
+      "name": {
+        "kind": "Name",
+        "loc": {
+          "end": 31,
+          "start": 9
+        },
+        "value": "CleanupAfterNodeDelete"
+      },
+      "selectionSet": {
+        "kind": "SelectionSet",
+        "loc": {
+          "end": 68,
+          "start": 60
+        },
+        "selections": [
+          {
+            "arguments": [],
+            "directives": [],
+            "kind": "Field",
+            "loc": {
+              "end": 66,
+              "start": 64
+            },
+            "name": {
+              "kind": "Name",
+              "loc": {
+                "end": 66,
+                "start": 64
+              },
+              "value": "id"
+            }
+          }
+        ]
+      },
+      "typeCondition": {
+        "kind": "NamedType",
+        "loc": {
+          "end": 49,
+          "start": 35
+        },
+        "name": {
+          "kind": "Name",
+          "loc": {
+            "end": 49,
+            "start": 35
+          },
+          "value": "DataEntityNode"
+        }
+      }
+    }
+  ],
+  "kind": "Document",
+  "loc": {
+    "end": 68,
+    "start": 0
+  }
+}
+`;

@@ -1,5 +1,5 @@
-export { getConfiguration } from './configuration-helper'
-export { plugin } from './plugin'
-import loader from './loader'
+export { getConfiguration } from './configuration-helper.ts'
+export { plugin } from './plugin.ts'
+import loader from './loader.ts'
 
 export default loader
