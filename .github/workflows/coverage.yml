@@ -20,6 +20,10 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Knip
+        run: pnpm knip
+      - name: Knip (production)
+        run: pnpm knip --production
       - name: Run the tests
         run: pnpm test --coverage
       - name: Upload coverage to Codecov
