@@ -20,8 +20,8 @@
 		"knip": "knip"
 	},
 	"devDependencies": {
-		"@changesets/changelog-github": "^0.5.1",
-		"@changesets/cli": "^2.29.7",
+		"@changesets/changelog-github": "^1.0.1",
+		"@changesets/cli": "^3.0.3",
 		"@graphql-tools/load": "^8.0.1",
 		"@tsconfig/node24": "^24.0.5",
 		"@types/jest": "^29.5.12",
