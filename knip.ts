@@ -8,6 +8,8 @@ const config: KnipConfig = {
   // Production source is marked with `!`; the tests are only in the default run.
   project: ["src/**/*.ts!", "test/**/*.ts"],
   ignoreExportsUsedInFile: production,
+  // knip reports `cycles` as a warning by default, which never fails CI: make an import cycle an error.
+  rules: { cycles: "error" },
   include: [
     "files",
     "dependencies",
